@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Philadelphia Property Assessment Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="widget-container">
+    <h1>Philadelphia Property Assessment Dashboard</h1>
+
+    <div class="opa-search">
+      <label for="parcel-number">Enter Parcel Number:</label>
+      <input type="text" id="parcel-number" placeholder="e.g., 406625800" />
+      <button id="search-button">Search</button>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="valuationChart"></canvas>
+    </div>
+
+    <div id="property-info-table"></div>
+  </div>
+
+  <script src="search.js"></script>
+  <script src="chart.js"></script>
+  <script src="table.js"></script>
+</body>
+</html>

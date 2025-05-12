@@ -1,0 +1,8 @@
+[
+    { "lower_bound": 0, "upper_bound": 100000, "property_count": 8000 },
+    { "lower_bound": 100000, "upper_bound": 200000, "property_count": 15000 },
+    { "lower_bound": 200000, "upper_bound": 300000, "property_count": 22000 },
+    { "lower_bound": 300000, "upper_bound": 400000, "property_count": 18000 },
+    { "lower_bound": 400000, "upper_bound": 500000, "property_count": 9000 },
+    { "lower_bound": 500000, "upper_bound": 1000000, "property_count": 3000 }
+  ]

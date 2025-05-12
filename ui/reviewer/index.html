@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Philadelphia Property Assessment Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+  <header class="title-bar">
+    <h1>
+      <img src="icons/city-of-philadelphia-yellow-white.png" alt="City of Philadelphia Icon" class="phila-icon" />
+      <span class="highlight-yellow">Philadelphia Property Assessment Explorer</span>
+    </h1>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <section id="summary-text"></section>
+
+      <section class="chart">
+        <h2 class="chart-heading">Tax Year Assessment</h2>
+        <div id="chart-tax-year" class="chart-box">
+          <div class="year-control">
+            <span class="year-label">Year:</span>
+            <select id="tax-year-select" class="year-select"></select>
+          </div>
+        </div>
+      </section>
+
+      <section class="chart">
+        <h2 class="chart-heading">Predicted Assessment</h2>
+        <div id="chart-current" class="chart-box">
+          <div class="year-control">
+            <span class="year-label">Year:</span>
+            <select id="pred-year-select" class="year-select"></select>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <section class="map-container">
+      <div id="map"></div>
+
+      <!-- search bar -->
+      <div id="search-bar" class="search-bar">
+        <input id="search-input" type="text" placeholder="Search for an address…" />
+        <button id="search-btn" aria-label="Search">Search</button>
+      </div>
+
+      <!-- field-selection panel -->
+      <div id="field-panel" class="field-panel">
+        <h3 class="field-heading">Displaying Fields</h3>
+        <label><input type="checkbox" data-field="address" checked> Address</label>
+        <label><input type="checkbox" data-field="current" checked> Current Assessment ($)</label>
+        <label><input type="checkbox" data-field="prev" checked> Tax Year 2024 Assessment ($)</label>
+        <label><input type="checkbox" data-field="deltaDollar" checked> Change ($)</label>
+        <label><input type="checkbox" data-field="deltaPct" checked> Change (%)</label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 City of Philadelphia | Built for MUSA 5090</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

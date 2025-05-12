@@ -1,0 +1,161 @@
+/* style.css */
+html { font-size: 1rem; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #222;
+  height: 100vh;
+  overflow: hidden;
+}
+
+p { margin: 0; }
+
+h1, h2 { font-family: 'Montserrat', sans-serif; }
+
+.title-bar {
+  background: #003366;
+  color: #fff;
+  padding: 1rem;
+  height: 5.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.phila-icon { height: 1.75rem; margin-right: 0.5rem; }
+
+.container {
+  display: flex;
+  height: calc(100vh - 5.5rem - 2.5rem);
+}
+
+.sidebar {
+  width: 38%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+}
+
+#summary-text {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.chart-heading {
+  background: #003366;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 1rem 0.25rem 0;
+  display: block;
+  width: auto;
+}
+
+.chart { flex: 0 0 auto; }
+
+.chart-box {
+  position: relative;
+  width: 100%;
+  max-height: 12rem;
+  padding: 0.25rem 0;
+}
+
+.year-control {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.year-select { font-size: 0.75rem; }
+
+.chart-box svg { overflow: visible; }
+
+.map-container { flex: 1; position: relative; }
+
+#map { width: 100%; height: 100%; }
+
+.footer {
+  height: 2.5rem;
+  background: #f0f0f0;
+  font-size: 0.85rem;
+  padding-left: 1rem;
+  line-height: 2.5rem;
+}
+
+.maplibregl-popup-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  max-width: 32rem;
+}
+
+.popup-content em { font-style: italic; }
+
+/* field-selection panel */
+.field-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.field-heading { margin: 0 0 0.5rem 0; font-size: 0.75rem; font-weight: 700; }
+
+.field-panel label { display: block; white-space: nowrap; }
+
+.field-panel input { margin-right: 0.25rem; }
+
+/* attribution text */
+.maplibregl-ctrl-attrib,
+.maplibregl-ctrl-attrib a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+}
+
+/* search bar */
+.search-bar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+  font-family: 'Open Sans', sans-serif;
+}
+
+#search-input {
+  border: 1px solid #bbb;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  width: 12rem;
+}
+
+#search-btn {
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
